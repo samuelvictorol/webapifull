@@ -1,3 +1,55 @@
 <div class="container">
-    <h1>home works</h1>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Sobrenome</th>
+        <th scope="col">Idade</th>
+        <th scope="col">Profissao</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-active" *ngFor="let pessoa of pessoas" >
+        <td>{{ pessoa.nome }}</td>
+        <td>{{ pessoa.sobrenNme }}</td>
+        <td>{{ pessoa.idade }}</td>
+        <td>{{ pessoa.profissao }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="Excluir(pessoa.pessoaId)">Excluir</button>
+        </td>
+        <td>
+          <button (click)="SetPessoa(pessoa)" class="btn btn-warning offset-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="label-input">
+          <label>Nome</label>
+          <input type="text" value="{{ pessoaX.nome }}">
+          <label>Sobrenome</label>
+          <input type="text" value="{{ pessoaX.sobrenNme }} ">
+          <label>Idade</label>
+          <input type="text" value="{{ pessoaX.idade }} ">
+          <label>Profissão</label>
+          <input type="text" value="{{ pessoaX.profissao }} ">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="Editar(pessoaX)" data-bs-dismiss="modal">Salvar Mudanças</button>
+      </div>
+    </div>
+  </div>
+</div> -->

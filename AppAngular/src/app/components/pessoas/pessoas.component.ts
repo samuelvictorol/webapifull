@@ -13,7 +13,7 @@ export class PessoasComponent implements OnInit {
   pessoas: Pessoa[] | undefined
   formulario: any;
   tituloFormulario!: string;
-  alert = false;
+  alert:boolean | undefined;
 
   constructor(private pessoasService: PessoasService) { }
 
@@ -24,6 +24,7 @@ export class PessoasComponent implements OnInit {
         this.pessoas = resultado;
       })
 
+      this.alert = false;
       this.formulario = new  FormGroup({
       //forms controle são os inputs
       nome: new FormControl(null),
