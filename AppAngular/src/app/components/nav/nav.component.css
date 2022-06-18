@@ -1,0 +1,17 @@
+nav{
+  background-color: black;
+  height: 5rem;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 30% ;
+  z-index: 99;
+}
+.nav-link{
+  color: rgb(225, 225, 225);
+}
+
+.nav-link:hover{
+  color: goldenrod;
+}

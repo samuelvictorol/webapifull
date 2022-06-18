@@ -1,0 +1,60 @@
+<div class="alerta-wrapper">
+  <div class="alerta offset-3" role="alert" *ngIf="alert">
+    <p>Pessoa registrada com Sucesso!!</p>
+  </div>
+</div>
+<div class="wrapper offset-3 ">
+    <div
+      class="border border-light rounded p-5 form-shadow"
+      *ngIf="formulario"
+    >
+      <h6 >{{ tituloFormulario }}</h6>
+      <form [formGroup]="formulario" (ngSubmit)="EnviarFormulario()">
+        <div class="form-group">
+          <label>Nome</label>
+          <input
+            type="text"
+            formControlName="nome"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Sobrenome</label>
+          <input
+            type="text"
+            class="fomr-control form-control-sm"
+            formControlName="sobrenNme"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Idade</label>
+          <input
+            type="number"
+            class="fomr-control form-control-sm"
+            formControlName="idade"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Profissão</label>
+          <input
+            type="text"
+            class="fomr-control form-control-sm"
+            formControlName="profissao"
+          />
+        </div>
+      </form>
+
+      <div class="btns">
+        <button type="submit" (click)="EnviarFormulario()">Salvar</button>
+        <button type="button" routerLink="" >Voltar</button>
+      </div>
+    </div>
+  </div>
+  <div class="load-wrapper" *ngIf="alert">
+    <div class="spinner-border text-info" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+

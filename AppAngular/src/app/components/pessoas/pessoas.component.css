@@ -1,0 +1,140 @@
+.wrapper {
+  width: 50rem;
+  animation: name 0.5s ease-in;
+  background-color: rgb(247, 247, 247);
+  margin-top: .2rem;
+}
+
+@keyframes name {
+  from {
+    transform: translatey(-10%);
+    background-color: transparent;
+    color: transparent;
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+h6 {
+  background-color: rgba(85, 255, 195, 0.42);
+  border-radius: 90px;
+  color: rgb(27, 27, 27);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alerta-wrapper{
+  height:4rem;
+}
+
+.alerta {
+  margin-top:1rem;
+  padding-top: 1rem;
+  border-radius: 90px;
+  height: 2rem;
+  width: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  animation: alert 3s ease-in-out;
+  animation-fill-mode: normal;
+  transform: translatey(-100%);
+  background-color: transparent;
+  color: transparent;
+  opacity: 0;
+}
+@keyframes alert {
+  0% {
+    transform: translatey(100%);
+    background-color: transparent;
+    color: transparent;
+    opacity: 0;
+  }
+  50% {
+    transform: translatey(0);
+    transform: translatey(0);
+    background-color: rgb(147, 255, 150);
+    box-shadow: 1px 1px 9px rgb(0, 255, 204);
+    color: #fff;
+    opacity: 1;
+  }
+  90% {
+    transform: translatey(0);
+    transform: translatey(0);
+    background-color: rgb(147, 255, 150);
+    box-shadow: 1px 1px 9px rgb(0, 255, 204);
+    color: #fff;
+    opacity: 1;
+  }
+  100% {
+    transform: translatey(100%);
+    background-color: transparent;
+    color: transparent;
+    opacity: 0;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-shadow {
+  box-shadow: 1px 1px 12px 1px rgb(0, 255, 204);
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dashed black;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0;
+  border-bottom: 1px dashed black;
+  outline: 0;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3rem;
+  justify-content: space-evenly;
+}
+
+button {
+  width: 33%;
+  color: rgb(0, 0, 0);
+  background-color: rgba(217, 255, 251, 0.788);
+  border: none;
+  border-radius: 90px;
+  box-shadow: 1px 2px 3px rgb(180, 247, 234);
+  transition: all 0.6s;
+}
+
+button:hover {
+  box-shadow: 1px 2px 4px rgb(0, 255, 204);
+}
+
+.load-wrapper {
+  margin-top:1rem;
+  background-color: transparent;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
